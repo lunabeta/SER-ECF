@@ -6,8 +6,6 @@ import lighting from "@/assets/building/lighting.jpg";
 import mep from "@/assets/building/mep.jpg";
 import hvac from "@/assets/building/hvac.jpg";
 
-const SLIDE_INTERVAL_MS = 3 * 60 * 1000; // 3 minutes per slide
-
 const slides = [
   { src: poster, alt: "SERECFOA G+8 Mixed Use Building" },
   { src: exterior, alt: "Building exterior render" },
@@ -17,28 +15,32 @@ const slides = [
   { src: hvac, alt: "HVAC ducting coordination" },
 ];
 
-const BuildingSlideshow = () => {
+type BuildingSlideshowProps = {
+  className?: string;
+};
+
+const BuildingSlideshow = ({ className = "" }: BuildingSlideshowProps) => {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     if (paused) return;
-    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), SLIDE_INTERVAL_MS);
+    const id = setInterval(() => setIndex((i) => (i + 1) % slides.length), 3000);
     return () => clearInterval(id);
   }, [paused]);
 
   return (
     <div
-      className="relative aspect-[4/3] overflow-hidden rounded-lg bg-section-alt"
+      className={`relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-section-alt ${className}`.trim()}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
       {slides.map((s, i) => (
         <img
-          key={s.alt}
+          key={s.src}
           src={s.src}
           alt={s.alt}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          className={`absolute inset-0 w-full h-full object-contain bg-section-alt transition-opacity duration-1000 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
         />

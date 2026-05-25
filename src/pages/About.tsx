@@ -13,7 +13,6 @@ import boardLemma from "@/assets/board-lemma.jpg";
 import boardSamuel from "@/assets/board-samuel.jpg";
 import boardWondmu from "@/assets/board-wondmu.jpg";
 import boardWendimagegn from "@/assets/board-wendimagegn.jpg";
-import buildingImg from "@/assets/building.jpg";
 import foundingPlaque from "@/assets/founding-plaque.jpg";
 import BuildingSlideshow from "@/components/BuildingSlideshow";
 
@@ -283,10 +282,14 @@ const AboutPage = () => {
             </div>
 
             <div className="card-elevated overflow-hidden p-6 md:p-8">
-              <div className="grid md:grid-cols-5 gap-6 md:gap-8 items-start">
-                <div className="md:col-span-2 space-y-5">
-                  <div className="aspect-[4/5] overflow-hidden rounded-lg bg-section-alt">
-                    <img src={foundingPlaque} alt={t("aboutPage.foundCeremony")} className="w-full h-full object-cover" />
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+                <div className="flex flex-col gap-4">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-section-alt">
+                    <img
+                      src={foundingPlaque}
+                      alt={t("aboutPage.foundCeremony")}
+                      className="absolute inset-0 w-full h-full object-cover object-center"
+                    />
                   </div>
                   <div className="space-y-3">
                     <h4 className="font-display text-xl font-bold text-foreground">{t("aboutPage.foundCeremony")}</h4>
@@ -294,13 +297,10 @@ const AboutPage = () => {
                   </div>
                 </div>
 
-                <div className="md:col-span-3 space-y-5">
-                  <div className="aspect-[4/3] overflow-hidden rounded-lg">
-                    <img src={buildingImg} alt={t("aboutPage.bldTitle")} className="w-full h-full object-cover" />
-                  </div>
-                  <BuildingSlideshow />
-                  <div className="space-y-4">
-                    <h4 className="font-display text-2xl font-bold text-foreground">{t("aboutPage.bldTitle")}</h4>
+                <div className="flex flex-col gap-4">
+                  <BuildingSlideshow className="w-full" />
+                  <div className="space-y-3">
+                    <h4 className="font-display text-xl font-bold text-foreground">{t("aboutPage.bldTitle")}</h4>
                     <p className="text-foreground/75 leading-relaxed text-sm">{t("aboutPage.bldBody")}</p>
                   </div>
                 </div>

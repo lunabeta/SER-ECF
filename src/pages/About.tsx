@@ -13,6 +13,9 @@ import boardLemma from "@/assets/board-lemma.jpg";
 import boardSamuel from "@/assets/board-samuel.jpg";
 import boardWondmu from "@/assets/board-wondmu.jpg";
 import boardWendimagegn from "@/assets/board-wendimagegn.jpg";
+import buildingImg from "@/assets/building.jpg";
+import foundingPlaque from "@/assets/founding-plaque.jpg";
+import BuildingSlideshow from "@/components/BuildingSlideshow";
 
 const BOARD_MEMBERS = [
   {
@@ -89,8 +92,6 @@ const EXECUTIVE_BOARD = [
     bio: "Responsible for board coordination, documentation, and ensuring effective governance communication and institutional continuity.",
   },
 ];
-import buildingImg from "@/assets/building.jpg";
-import foundingPlaque from "@/assets/founding-plaque.jpg";
 
 const AboutPage = () => {
   const { t } = useTranslation();
@@ -297,6 +298,7 @@ const AboutPage = () => {
                   <div className="aspect-[4/3] overflow-hidden rounded-lg">
                     <img src={buildingImg} alt={t("aboutPage.bldTitle")} className="w-full h-full object-cover" />
                   </div>
+                  <BuildingSlideshow />
                   <div className="space-y-4">
                     <h4 className="font-display text-2xl font-bold text-foreground">{t("aboutPage.bldTitle")}</h4>
                     <p className="text-foreground/75 leading-relaxed text-sm">{t("aboutPage.bldBody")}</p>

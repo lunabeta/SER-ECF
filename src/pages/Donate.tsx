@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Heart, ShieldCheck, Globe2, Repeat, FileCheck2 } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import BankDetails from "@/components/BankDetails";
 import { Button } from "@/components/ui/button";
 import { useRevealRoot } from "@/hooks/useReveal";
@@ -13,11 +14,11 @@ const Donate = () => {
   useRevealRoot();
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Donate — Support SER-ECF's Mission in Southern Ethiopia";
   }, []);
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO title="Donate — Support SER-ECF" description="Give to SER-ECF: bank details, international giving, and monthly partnership options." url="https://serecf.org/donate" />
       <SiteHeader />
 
       <section className="relative pt-40 pb-16 md:pt-48 md:pb-24 overflow-hidden bg-gradient-hero text-primary-foreground">

@@ -4,6 +4,7 @@ import { ArrowLeft, Inbox, Handshake, Mail, Trash2, Loader2, ClipboardList, LogO
 import { format } from "date-fns";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/integrations/supabase/client";
@@ -35,7 +36,6 @@ const AdminDashboard = () => {
   };
 
   useEffect(() => {
-    document.title = "Admin Dashboard — SER-ECF";
     load();
   }, []);
 
@@ -47,6 +47,7 @@ const AdminDashboard = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO title="Admin Dashboard" description="Admin dashboard for managing submissions and site content." noindex />
       <SiteHeader />
 
       <section className="pt-32 pb-10 md:pt-40 bg-gradient-hero text-primary-foreground relative overflow-hidden">

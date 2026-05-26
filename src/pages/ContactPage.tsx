@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Mail, Phone, MapPin, Heart, Send } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
+import SEO from "@/components/SEO";
 import SiteFooter from "@/components/SiteFooter";
 import { useRevealRoot } from "@/hooks/useReveal";
 
@@ -9,7 +10,6 @@ const ContactPage = () => {
   useRevealRoot();
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Contact SER-ECF";
   }, []);
 
   const reasons = [
@@ -24,6 +24,11 @@ const ContactPage = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO
+        title="Contact — SER-ECF"
+        description="Contact SER-ECF for partnership, ministry inquiries, events, donations, and general information. Find email, phone, and office details."
+        url="https://serecf.org/contact"
+      />
       <SiteHeader />
 
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-gradient-hero text-primary-foreground">

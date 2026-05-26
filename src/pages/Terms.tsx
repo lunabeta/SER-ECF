@@ -1,10 +1,17 @@
 import InfoPage from "@/components/InfoPage";
+import SEO from "@/components/SEO";
 
 const EFFECTIVE_DATE = "May 14, 2026";
 
 const Terms = () => {
   return (
-    <InfoPage
+    <>
+      <SEO
+        title="Terms & Conditions"
+        description="Terms and conditions for using the SER-ECF website and services. Read about intellectual property, donations, privacy, and legal terms."
+        url="https://serecf.org/terms"
+      />
+      <InfoPage
       title="Terms & Conditions | SER-ECF"
       heroEyebrow="Legal"
       heroTitle={<>Terms & Conditions</>}

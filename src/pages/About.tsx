@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BookOpen, Users, Globe, Heart, Shield, Megaphone, Crown, ScrollText, Sparkles } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
+import SEO from "@/components/SEO";
 import SiteFooter from "@/components/SiteFooter";
 import { useRevealRoot } from "@/hooks/useReveal";
 import drWendmagegn from "@/assets/dr-wendmagegn.png";
@@ -98,7 +99,6 @@ const AboutPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "About SER-ECF — Identity, Vision, Mission, History & Leadership";
   }, []);
 
   const mandate = [
@@ -114,6 +114,11 @@ const AboutPage = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO
+        title="About SER-ECF"
+        description="Learn about SER-ECF — our vision, mission, history, leadership, and the ministries we serve across Southern Ethiopia."
+        url="https://serecf.org/about"
+      />
       <SiteHeader />
 
       {/* Page hero */}

@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import { z } from "zod";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -51,7 +52,6 @@ const AdminMedia = () => {
   };
 
   useEffect(() => {
-    document.title = "Media Library — SER-ECF Admin";
     load();
   }, []);
 
@@ -101,6 +101,7 @@ const AdminMedia = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO title="Admin — Media Library" description="Admin media upload and management for SER-ECF." noindex />
       <SiteHeader />
       <section className="pt-32 pb-10 md:pt-40 bg-gradient-hero text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-25" style={{ backgroundImage: "var(--gradient-mesh)" }} />

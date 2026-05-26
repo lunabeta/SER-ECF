@@ -64,7 +64,7 @@ const SiteFooter = () => {
 
       <div className="container-wide mx-auto px-4 md:px-8 mt-6 pt-4 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between gap-2 text-xs text-primary-foreground/60 relative z-10">
         <div>© {new Date().getFullYear()} SER-ECF. {t("footer.rights")} · <Link to="/terms" className="hover:text-secondary transition-colors">Terms & Conditions</Link></div>
-        <div>{t("footer.madeBy")} <span className="text-secondary">♥</span> <a href="mailto:lunaworku@gmail.com" className="text-secondary hover:underline transition-colors">{t("footer.madeByName")}</a></div>
+        <div>{t("footer.madeBy")} <span className="text-secondary">♥</span> <Link to="/developer" className="text-secondary hover:underline transition-colors">Betelhem Worku</Link></div>
       </div>
     </footer>
   );

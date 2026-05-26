@@ -29,6 +29,7 @@ import PartnershipsPage from "./pages/PartnershipsPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import Leadership from "./pages/Leadership.tsx";
 import Terms from "./pages/Terms.tsx";
+import Developer from "./pages/Developer.tsx";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/events" element={<Events />} />
             <Route path="/partnerships" element={<PartnershipsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/developer" element={<Developer />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<RequireAdmin><AdminDashboard /></RequireAdmin>} />

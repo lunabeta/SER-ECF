@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, CheckCircle2, AlertCircle, Circle, ClipboardList, Filter } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 
 type Status = "complete" | "partial" | "missing";
 
@@ -180,7 +181,6 @@ const AdminChecklist = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Content Checklist — SER-ECF Admin";
   }, []);
 
   const stats = useMemo(() => {
@@ -193,6 +193,7 @@ const AdminChecklist = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO title="Admin — Content Checklist" description="Admin checklist for SER-ECF site content and status." noindex />
       <SiteHeader />
 
       <section className="pt-32 pb-12 md:pt-40 md:pb-16 bg-gradient-hero text-primary-foreground relative overflow-hidden">

@@ -4,6 +4,7 @@ import { ArrowLeft, LucideIcon } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { useRevealRoot } from "@/hooks/useReveal";
+import SEO from "@/components/SEO";
 
 export type InfoBlock =
   | { kind: "paragraph"; text: string }
@@ -120,8 +121,11 @@ const InfoPage = ({ title, heroEyebrow, heroTitle, heroSubtitle, sections, cta }
     document.title = title;
   }, [title]);
 
+  const canonical = typeof window !== "undefined" ? `https://serecf.org${window.location.pathname}` : "https://serecf.org";
+
   return (
     <main className="min-h-screen bg-background">
+      <SEO title={title.replace(/\s*\u2014\s*SER-ECF$/i, "")} description={heroSubtitle ?? title} url={canonical} />
       <SiteHeader />
 
       {/* Hero */}

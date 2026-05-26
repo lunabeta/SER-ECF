@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Briefcase, Heart, Users, Shield, ExternalLink } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import SEO from "@/components/SEO";
 import { useRevealRoot } from "@/hooks/useReveal";
 
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdryA70k38CtMyi3csS1w4j3S4Ekv59-fOMJ051BNziL0Rl4A/viewform?embedded=true";
@@ -12,7 +13,6 @@ const Careers = () => {
   useRevealRoot();
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = "Careers — Work with SER-ECF";
   }, []);
 
   const opportunities = [
@@ -24,6 +24,7 @@ const Careers = () => {
 
   return (
     <main className="min-h-screen bg-background">
+      <SEO title="Careers — SER-ECF" description="Work with SER-ECF: current openings, internships, and application information." url="https://serecf.org/careers" />
       <SiteHeader />
 
       <section className="relative pt-40 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-gradient-hero text-primary-foreground">

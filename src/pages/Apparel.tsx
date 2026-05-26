@@ -1,8 +1,11 @@
 import InfoPage from "@/components/InfoPage";
+import SEO from "@/components/SEO";
 import { Shirt, Crown, Send, Calendar, Users, Globe2 } from "lucide-react";
 
 const Apparel = () => (
-  <InfoPage
+  <>
+    <SEO title="Apparel — SER-ECF" description="Official SER-ECF apparel and branded materials." url="https://serecf.org/apparel" />
+    <InfoPage
     title="Apparel — SER-ECF"
     heroEyebrow="Identity"
     heroTitle={<>SER-ECF <span className="text-gradient-ethiopian">Apparel</span></>}

@@ -315,31 +315,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Our Commitment */}
-      <section className="section-padding bg-section-alt">
-        <div className="container-wide mx-auto">
-          <div className="max-w-3xl mx-auto text-center reveal">
-            <p className="text-secondary font-medium tracking-[0.25em] uppercase text-sm mb-3">Our Commitment</p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">What We Stand For</h2>
-            <div className="section-divider mt-8" />
-          </div>
-          <ul className="max-w-3xl mx-auto mt-10 grid sm:grid-cols-2 gap-3 reveal">
-            {[
-              "Serving the Church with integrity and humility",
-              "Advancing the Gospel of Jesus Christ",
-              "Strengthening unity among Evangelical churches",
-              "Promoting peace and reconciliation",
-              "Supporting community transformation",
-              "Ensuring accountability, transparency, and excellence",
-            ].map((c) => (
-              <li key={c} className="card-elevated !p-4 flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                <span className="text-foreground/85 text-sm font-medium">{c}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {/* Our Commitment - Single Section */}
       <section className="section-padding bg-section-alt">
         <div className="container-wide mx-auto">
           <div className="max-w-3xl mx-auto text-center reveal">

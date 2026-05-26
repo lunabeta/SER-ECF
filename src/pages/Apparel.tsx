@@ -61,6 +61,7 @@ const Apparel = () => (
     ]}
     cta={{ title: "Connect with us", primary: { label: "Contact Office", to: "/contact" } }}
   />
+  </>
 );
 
 export default Apparel;
